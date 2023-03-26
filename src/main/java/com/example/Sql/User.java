@@ -1,5 +1,6 @@
 package com.example.Sql;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -8,6 +9,7 @@ import jakarta.persistence.Table;
 @Table(name = "user_info") //  for giving table name ,by default table name == class name
 public class User {
     @Id// used to specify the primary key of the table
+    @Column(unique = true)
     private int id;
     private String name;
     private int age;
